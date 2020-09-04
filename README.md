@@ -1,2 +1,2 @@
 # Node.js
-some practice for node.js
+project for practising node.js
