@@ -1,0 +1,35 @@
+<div class="row text-center ">
+  <div class="col-6 mt-5 m-auto">
+    <div class="card">
+      <h1 class="card-header">Hello world</h1>
+      <h3 class="card-body">Welcome <span class="lead text-danger"><%=name  %></span>
+      </h3>
+      <%-include('message') %>
+      <form action="/upload" enctype="multipart/form-data" method="POST">
+        <div class="form-group row ">
+          <label for="filename" class="col-4 mt-auto">Filename</label>
+          <input type="text" id="filename" name="filename" placeholder="Please give a name for your file"
+            class="form-control col-6" autocomplete="off">
+        </div>
+        <div class="form-group row custom-file">
+          <label for="file" class="m-auto  custom-file-label col-10 ">Upload your file</label>
+          <input type="file" id="file" name="avatar" class="form-control custom-file-input">
+        </div>
+        <button type="submit" class="btn btn-info mt-3">upload</button>
+      </form>
+      <button class="btn btn-primary mt-5" id="logout">log out</button>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  const logoutBtn = document.querySelector('#logout')
+  logoutBtn.addEventListener('click', () => {
+    if (confirm('Sure to log out?')) {
+      window.location.href = "/logout"
+    } else {
+      return;
+    }
+  })
+</script>

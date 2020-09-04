@@ -1,0 +1,24 @@
+<div class="row mt-5">
+  <div class="col-6 m-auto text-center">
+    <h1 class="card card-header">
+      <i class="fa fa-sign-in" aria-hidden="true"></i>Login
+    </h1>
+    <div class="card-body">
+      <%- include('message') %>
+      <form action="/index/login" method="POST">
+        <div class="form-group">
+          <label for="name" class="text-muted">Name:</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name">
+        </div>
+        <div class="form-group mt-3">
+          <label for="password" class="text-muted">Password:</label>
+          <input type="password" id="password" name="password" class="form-control" placeholder="Enter password">
+        </div>
+        <button type="submit" class="btn btn-success">Login</button>
+      </form>
+      <p class="lead mt-4">Not registed? Click here to <a href="/index/register">Register</a></p>
+
+    </div>
+  </div>
+
+</div>

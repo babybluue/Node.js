@@ -1,0 +1,64 @@
+<% if(typeof errors!='undefined'){ %>
+<% errors.forEach(error=>{ %>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <%= error.msg %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<% })%>
+<%} %>
+
+<% if (error !=''){ %>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <%= error  %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<% } %>
+
+<% if(warning != ''){ %>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <%=warning %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<% } %>
+
+<% if(logout != ''){ %>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <%=logout %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<% } %>
+
+<% if(success_info!=""){%>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <%= success_info %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<% } %>
+
+<% if(file_error!=''){%>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <%= file_error %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<% } %>
+
+<% if( file_success!=""){%>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <%=file_success  %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<% } %>

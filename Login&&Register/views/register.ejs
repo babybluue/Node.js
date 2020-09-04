@@ -1,0 +1,32 @@
+<div class="row mt-5">
+  <div class="col-6 m-auto text-center">
+    <h1 class="card card-header">
+      <i class="fa fa-user-circle " aria-hidden="true"></i>Register
+    </h1>
+    <div class="card-body">
+      <%- include('message') %>
+      <form action="/index/register" method="POST">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" value="<%= typeof name
+      !='undefined'?name:'' %>">
+        </div>
+        <div class="form-group mt-4">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password"
+            value="<%= typeof
+      password !='undefined'?password:'' %>">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="password2" name="password2"
+            placeholder="Enter your password again" value="<%= typeof
+              password2 !='undefined'?password2:'' %>">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+      </form>
+    </div>
+
+    <p class="lead mt-4">Have a account? <a href="login">Login</a> </p>
+
+  </div>
+</div>
